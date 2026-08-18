@@ -1,38 +1,36 @@
-# Project Name
+# Government Tax System
 
-This is a simple project created to help you understand and use it easily.
+This project is a small full-stack web app for estimating taxes and recording tax payments. It includes a Node.js/Express backend and a browser-based frontend for entering tax details and submitting payment records.
 
 ## Overview
 
-This repository is designed to be beginner-friendly and easy to follow. It gives you a clean starting point and simple steps to run the project.
+The app allows a taxpayer to:
+
+- enter annual income and deductions
+- choose a filing status
+- calculate estimated tax due
+- submit a payment record
+- review recent payment history in the UI
 
 ## Features
 
-- Easy to set up
-- Simple project structure
-- Beginner-friendly instructions
-- Quick start for local development
+- Tax calculation based on filing status brackets
+- Express API for tax estimates and payment submission
+- Responsive front-end form and payment table
+- Simple local data storage in memory for payment records
 
 ## Requirements
 
 Before running the project, make sure you have:
 
-- Git
-- Node.js and npm installed
-- A text editor such as VS Code
+- Node.js
+- npm
+- VS Code or another code editor
 
 ## Installation
 
-1. Open your terminal.
-2. Clone the repository:
-
-   git clone <repository-url>
-
-3. Go to the project folder:
-
-   cd <project-folder>
-
-4. Install dependencies:
+1. Open a terminal in this project folder.
+2. Install the dependencies:
 
    npm install
 
@@ -42,38 +40,34 @@ Start the app with:
 
 npm start
 
-If the project uses a development mode, you can run:
+Then open the browser at:
 
-npm run dev
+http://localhost:3000
 
 ## Project Structure
 
-project-folder/
-├── src/
+TRA-/
 ├── public/
+│   ├── app.js
+│   ├── index.html
+│   └── style.css
 ├── package.json
-├── README.md
+├── readme.md
+├── server.js
 └── .gitignore
 
-## How It Works
+## API Endpoints
 
-- The main code is inside the `src` folder.
-- Configuration files are stored in the root folder.
-- You can change the logic and UI based on your project needs.
+- GET /api/health — checks if the server is running
+- POST /api/tax/estimate — calculates estimated tax based on user input
+- POST /api/payments — records a payment submission
+- GET /api/payments — returns all saved payment records
 
-## Contributing
+## Notes
 
-If you want to improve the project:
-
-1. Create a new branch.
-2. Make your changes.
-3. Commit your work.
-4. Push the branch and open a pull request.
+- Tax records are kept in memory while the server is running.
+- This app is intended as a simple demonstration project and can be expanded with a database, validation, or authentication.
 
 ## License
 
-This project is open for learning and personal use.
-
-## Contact
-
-If you need help, feel free to contact the project owner or maintainer.
+This project is provided for learning and personal use.
