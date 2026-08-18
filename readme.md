@@ -1,73 +1,66 @@
 # Government Tax System
 
-This project is a small full-stack web app for estimating taxes and recording tax payments. It includes a Node.js/Express backend and a browser-based frontend for entering tax details and submitting payment records.
-
-## Overview
-
-The app allows a taxpayer to:
-
-- enter annual income and deductions
-- choose a filing status
-- calculate estimated tax due
-- submit a payment record
-- review recent payment history in the UI
+A simple government tax payment and estimation system built with Node.js and Express.
 
 ## Features
 
-- Tax calculation based on filing status brackets
-- Express API for tax estimates and payment submission
-- Responsive front-end form and payment table
-- Simple local data storage in memory for payment records
+- Tax estimation based on income, deductions, and filing status
+- Payment submission form
+- Recent payment records display
+- Simple government portal dashboard
 
-## Requirements
-
-Before running the project, make sure you have:
+## Tech Stack
 
 - Node.js
-- npm
-- VS Code or another code editor
-
-## Installation
-
-1. Open a terminal in this project folder.
-2. Install the dependencies:
-
-   npm install
-
-## Running the Project
-
-Start the app with:
-
-npm start
-
-Then open the browser at:
-
-http://localhost:3000
+- Express
+- HTML, CSS, and JavaScript
 
 ## Project Structure
 
-TRA-/
-├── public/
-│   ├── app.js
-│   ├── index.html
-│   └── style.css
-├── package.json
-├── readme.md
-├── server.js
-└── .gitignore
+- `server.js` – API and app server
+- `public/index.html` – user interface
+- `public/style.css` – styling
+- `public/app.js` – frontend logic
+- `.env.example` – sample environment configuration
+
+## Setup
+
+1. Open a terminal in the project folder.
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the app:
+
+   ```bash
+   npm start
+   ```
+
+4. Open the browser at:
+
+   ```text
+   http://localhost:3000
+   ```
 
 ## API Endpoints
 
-- GET /api/health — checks if the server is running
-- POST /api/tax/estimate — calculates estimated tax based on user input
-- POST /api/payments — records a payment submission
-- GET /api/payments — returns all saved payment records
+- `GET /api/health` – checks app status
+- `POST /api/tax/estimate` – estimates tax due
+- `POST /api/payments` – submits a payment record
+- `GET /api/payments` – retrieves payment history
 
 ## Notes
 
-- Tax records are kept in memory while the server is running.
-- This app is intended as a simple demonstration project and can be expanded with a database, validation, or authentication.
+This project is a lightweight demo for a government tax system and can be extended with:
+
+- login and admin dashboard
+- secure database storage
+- tax records by citizen ID
+- receipt generation
+- reporting tools
 
 ## License
 
-This project is provided for learning and personal use.
+MIT
